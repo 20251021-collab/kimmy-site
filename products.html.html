@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzFruit 元氣果昔氣泡飲 - 產品介紹</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 導覽列 -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">🍹 FizzFruit</div>
+            <ul class="nav-links">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="products.html" class="active">產品介紹</a></li>
+                <li><a href="contact.html">聯絡我們</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">人氣主打口味</h1>
+        <p class="page-subtitle">挑選一款最適合你今天心情的繽紛氣泡吧！</p>
+
+        <div class="product-grid">
+            <!-- 產品 1 -->
+            <div class="product-card">
+                <div class="product-img bg-pink">🍓</div>
+                <h3>初戀草莓氣泡飲</h3>
+                <p class="price">NT$ 45 / 罐</p>
+                <p class="desc">嚴選新鮮草莓果泥，微酸微甜的浪漫口感，少女心大爆發！</p>
+                <button class="btn-primary" onclick="addToCart('初戀草莓氣泡飲')">加入購物車</button>
+            </div>
+
+            <!-- 產品 2 -->
+            <div class="product-card">
+                <div class="product-img bg-yellow">🍋</div>
+                <h3>仲夏海鹽檸檬飲</h3>
+                <p class="price">NT$ 45 / 罐</p>
+                <p class="desc">屏東九如檸檬搭配微鹹海鹽，清爽解膩，運動後補水首選。</p>
+                <button class="btn-primary" onclick="addToCart('仲夏海鹽檸檬飲')">加入購物車</button>
+            </div>
+
+            <!-- 產品 3 -->
+            <div class="product-card">
+                <div class="product-img bg-orange">🍑</div>
+                <h3>蜜桃烏龍氣泡茶</h3>
+                <p class="price">NT$ 50 / 罐</p>
+                <p class="desc">香甜水蜜桃遇上清香高山烏龍，茶香與果香在舌尖完美交織。</p>
+                <button class="btn-primary" onclick="addToCart('蜜桃烏龍氣泡茶')">加入購物車</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 FizzFruit 元氣果昔氣泡飲. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

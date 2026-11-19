@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroPods Pro - 聯絡我們</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">🎧 AEROPODS</div>
+            <ul class="nav-links">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="products.html">產品規格</a></li>
+                <li><a href="contact.html" class="active">聯絡我們</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">技術支援與聯絡</h1>
+        <p class="page-subtitle">需要保固服務、門市試聽預約或企業採購？請填寫下方表單。</p>
+
+        <div class="contact-box">
+            <form onsubmit="sendTechForm(event)" id="tech-form">
+                <div class="form-group">
+                    <label>聯絡人姓名</label>
+                    <input type="text" id="userName" placeholder="請輸入您的姓名" required>
+                </div>
+                <div class="form-group">
+                    <label>電子信箱</label>
+                    <input type="email" id="userEmail" placeholder="name@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>問題類型</label>
+                    <select id="issueType">
+                        <option value="門市試聽預約">門市試聽預約</option>
+                        <option value="產品保固維修">產品保固與維修</option>
+                        <option value="訂單與配送查詢">訂單與配送查詢</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>詳細說明</label>
+                    <textarea id="userMsg" rows="4" placeholder="請描述您的需求..." required></textarea>
+                </div>
+                <button type="submit" class="btn-neon full-width">傳送訊息</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 AEROPODS AUDIO TECH. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
