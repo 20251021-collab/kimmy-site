@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Microsoft JhengHei', sans-serif;
+}
+
+body {
+    background-color: #0B0F19;
+    color: #E2E8F0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* 導覽列 */
+.navbar {
+    background-color: #111827;
+    border-bottom: 1px solid #1E293B;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #38BDF8;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #94A3B8;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #38BDF8;
+    background-color: rgba(56, 189, 248, 0.1);
+}
+
+/* 首頁主視覺 */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.badge {
+    background: rgba(56, 189, 248, 0.15);
+    color: #38BDF8;
+    border: 1px solid #38BDF8;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 2.6rem;
+    margin: 15px 0;
+    background: linear-gradient(90deg, #FFFFFF, #38BDF8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    color: #94A3B8;
+    font-size: 1.1rem;
+    margin-bottom: 35px;
+}
+
+/* 互動模式切換器 */
+.mode-box {
+    background: #111827;
+    border: 1px solid #1E293B;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 35px;
+}
+
+.mode-label {
+    font-size: 0.95rem !important;
+    margin-bottom: 15px !important;
+}
+
+.mode-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.mode-btn {
+    background: #1E293B;
+    color: #CBD5E1;
+    border: 1px solid #334155;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.mode-btn.active, .mode-btn:hover {
+    background: #38BDF8;
+    color: #0B0F19;
+    border-color: #38BDF8;
+}
+
+.mode-screen {
+    background: #0B0F19;
+    border-left: 4px solid #38BDF8;
+    padding: 18px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.mode-screen h3 {
+    color: #38BDF8;
+    margin-bottom: 5px;
+}
+
+.mode-screen p {
+    margin: 0 !important;
+    font-size: 0.95rem !important;
+}
+
+/* 按鈕 */
+.cta-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-neon {
+    background: #38BDF8;
+    color: #0B0F19;
+    border: none;
+    padding: 12px 26px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+.btn-neon:hover {
+    background: #7DD3FC;
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.7);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #E2E8F0;
+    border: 1px solid #475569;
+    padding: 12px 26px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    border-color: #38BDF8;
+    color: #38BDF8;
+}
+
+/* 產品介紹頁 */
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.page-subtitle {
+    text-align: center;
+    color: #94A3B8;
+    margin-bottom: 40px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background: #111827;
+    border: 1px solid #1E293B;
+    border-radius: 16px;
+    padding: 30px 25px;
+    text-align: center;
+    position: relative;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    border-color: #38BDF8;
+    transform: translateY(-5px);
+}
+
+.product-card.featured {
+    border: 2px solid #38BDF8;
+}
+
+.tag {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: #38BDF8;
+    color: #0B0F19;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 3px 12px;
+    border-radius: 12px;
+}
+
+.product-icon {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.price {
+    color: #38BDF8;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 10px 0 20px;
+}
+
+.spec-list {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 25px;
+    color: #CBD5E1;
+}
+
+.spec-list li {
+    padding: 6px 0;
+    border-bottom: 1px solid #1E293B;
+}
+
+/* 聯絡表單 */
+.contact-box {
+    max-width: 550px;
+    margin: 0 auto;
+    background: #111827;
+    border: 1px solid #1E293B;
+    padding: 35px;
+    border-radius: 16px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #CBD5E1;
+    font-weight: bold;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: #0B0F19;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: #38BDF8;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* 彈出視窗 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #111827;
+    border: 1px solid #38BDF8;
+    padding: 35px;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #94A3B8;
+}
+
+.code-box {
+    background: #0B0F19;
+    border: 1px dashed #38BDF8;
+    color: #38BDF8;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 12px;
+    margin: 20px 0;
+    border-radius: 8px;
+    letter-spacing: 3px;
+}
+
+footer {
+    background: #070A11;
+    border-top: 1px solid #1E293B;
+    color: #64748B;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
